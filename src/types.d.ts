@@ -1,6 +1,3 @@
-export type Weather = 'sunny' | 'rainy' | 'windy' | 'stormy'
-export type Visibility = 'great' | 'good' | 'ok' | 'poor'
-
 export interface DiaryEntry {
   id: number
   date: string
@@ -12,6 +9,7 @@ export interface DiaryEntry {
 // export type NonSensitiveDiaryEntry = Pick<DiaryEntry, 'id' | 'date' | 'weather' | 'visibility'>
 
 export type NonSensitiveDiaryEntry = Omit<DiaryEntry, 'comment'>
+export type NewDiaryEntry = Omit<DiaryEntry, 'id'>
 
 // interface SpecialDiaryEntry extends DiaryEntry {
 //     flightNumber: number
